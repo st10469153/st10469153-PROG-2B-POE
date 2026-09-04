@@ -1,4 +1,3 @@
-<img width="1196" height="119" alt="successfulBuildScreenshot" src="https://github.com/user-attachments/assets/a5e84a8b-4eb8-4138-a8f2-fe7ee8d457a1" /># Race Day
 # RaceDay – Part 1: System Planning and Database Design
 
 ## 📌 Project Overview
