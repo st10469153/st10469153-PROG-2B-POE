@@ -1,0 +1,56 @@
+name: RaceDay Part 1 File Validation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check docs folder exists
+        run: |
+          if [ ! -d "docs" ]; then
+            echo "ERROR: docs folder does not exist."
+            exit 1
+          fi
+
+          echo "docs folder found."
+
+      - name: Check ERD file exists
+        run: |
+          if [ ! -f "docs/RaceDay ERD Diagram.pdf" ]; then
+            echo "ERROR: ERD file is missing."
+            exit 1
+          fi
+
+          echo "ERD file found."
+
+      - name: Check API Endpoint Plan exists
+        run: |
+          if [ ! -f "docs/PROG 2B API Endpoint Plan.pdf" ]; then
+            echo "ERROR: API Endpoint Plan is missing."
+            exit 1
+          fi
+
+          echo "API Endpoint Plan found."
+
+      - name: Check SQL script exists
+        run: |
+          if [ ! -f "docs/RaceDayDB SQL Script.sql" ]; then
+            echo "ERROR: SQL database script is missing."
+            exit 1
+          fi
+
+          echo "SQL database script found."
+
+      - name: Validation successful
+        run: echo "All required Part 1 files are present!"
