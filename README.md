@@ -207,7 +207,7 @@ A screenshot of a successful GitHub Actions build will be included below.
 
 ## CI/CD Build Screenshot
 
-<img width="1196" height="119" alt="successfulBuildScreenshot" src="https://github.com/user-attachments/assets/fa240b1d-0ba5-4fe7-b47f-58bd1b0241bb" />
+<img width="1896" height="788" alt="Screenshot 2026-09-04 113314" src="https://github.com/user-attachments/assets/7917d154-7b91-49bb-ac03-f0234d089bf9" />
 ---
 
 # 🚀 Future Development
