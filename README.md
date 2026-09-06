@@ -219,7 +219,7 @@ The RaceDay project will be developed progressively across the remaining parts o
 A video presentation demonstrating and explaining the Part 1 planning documents will be available at the following link:
 
 **YouTube Link:**
-[Insert unlisted YouTube video link here]
+[https://youtu.be/OxgQRVjZtow]
 
 The video will cover:
 
