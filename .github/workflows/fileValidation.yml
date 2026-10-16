@@ -36,7 +36,7 @@ jobs:
 
       - name: Check API Endpoint Plan exists
         run: |
-          if [ ! -f "docs/PROG 2B API Endpoint Plan.pdf" ]; then
+          if [ ! -f "docs/API Endpoint Plan.pdf" ]; then
             echo "ERROR: API Endpoint Plan is missing."
             exit 1
           fi
