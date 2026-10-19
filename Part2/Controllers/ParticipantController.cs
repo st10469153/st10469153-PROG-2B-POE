@@ -9,6 +9,7 @@ namespace RaceDayApplicationApi.Controllers;
 
 
 
+
 [Route("api/[controller]")]
 [ApiController]
 public class ParticipantController : ControllerBase
