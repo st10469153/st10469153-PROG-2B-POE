@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using RaceDayApplicationApi.Data;
-using RaceDayApplicationApi.Models
+using RaceDayApplicationApi.Models;
 using RaceDayApplicationApi.Models.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -32,7 +32,7 @@ namespace CourseRegistrationApi.Controllers
 
         }
         [HttpPost]
-        public IActionResult AddParticipant(AddParticipantsDto addParticipantDto)
+        public IActionResult AddParticipant(AddParticipantDto addParticipantDto)
         {
             var studentEntity = new Participant()
             {
