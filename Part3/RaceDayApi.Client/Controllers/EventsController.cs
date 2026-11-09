@@ -20,5 +20,27 @@ namespace RaceDayApi.Client.Controllers
             var events = await _events.GetEventsAsync();
             return Ok(events);
         }
+
+        // Removed View() usages, replaced with appropriate IActionResult responses for API controller
+        [HttpGet("create")]
+        public IActionResult Create()
+        {
+            // For API controllers, typically return a template or default model, or just Ok()
+            return Ok();
+        }
+
+        [HttpPost("create")]
+        public async Task<IActionResult> Create(EventDTO model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            bool saved = await _events.CreateEventAsync(model);
+            if (!saved)
+            {
+                ModelState.AddModelError("", "Could not save the event.");
+                return BadRequest(ModelState);
+            }
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

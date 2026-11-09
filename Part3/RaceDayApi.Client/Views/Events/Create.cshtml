@@ -1,0 +1,11 @@
+﻿@model RaceDayApi.Client.Models.Event
+
+<h2>Create Event</h2>
+
+<form asp-action="Create" method="post">
+    <label asp-for="EventName"></label>
+    <input asp-for="EventName" />
+    <label asp-for="OrganizerName"></label>
+    <input asp-for="OrganizerName" />
+    <button type="submit">Save</button>
+</form>

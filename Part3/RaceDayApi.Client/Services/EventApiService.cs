@@ -15,5 +15,10 @@ namespace RaceDayApi.Client.Services
                 return await _http.GetFromJsonAsync<List<EventDTO>>("api/events")
                 ?? new List<EventDTO>();
             }
+        public async Task<bool> CreateEventAsync(EventDTO model)
+        {
+            var response = await _http.PostAsJsonAsync("api/events", model);
+            return response.IsSuccessStatusCode;
         }
+    }
 }
