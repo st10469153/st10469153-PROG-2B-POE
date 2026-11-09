@@ -21,11 +21,12 @@ namespace RaceDayApi.Client.Controllers
             return Ok(events);
         }
 
-        // Removed View() usages, replaced with appropriate IActionResult responses for API controller
         [HttpGet("create")]
         public IActionResult Create()
         {
-            // For API controllers, typically return a template or default model, or just Ok()
+            string? role = HttpContext.Session.GetString("Role");
+            if (role != "Organizer")
+                return RedirectToAction("AccessDenied", "Account");
             return Ok();
         }
 

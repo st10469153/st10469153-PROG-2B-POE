@@ -7,13 +7,6 @@ namespace RaceDayApi.Client.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly IAuthService _auth;
-
-        public AccountController(IAuthService auth)
-        {
-            _auth = auth;
-        }
-
         [HttpPost]
         public async Task<IActionResult> Login(LoginModel model)
         {
