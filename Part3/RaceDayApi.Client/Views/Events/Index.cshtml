@@ -17,4 +17,24 @@
         <h4>@item.EventName</h4>
         <p>Lecturer: @item.OrganizerName</p>
     </div>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-warning"> @ViewBag.Error</div>
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    @item.EventId
+                </td>
+
+                <td>
+                    @item.EventName
+                </td>
+
+                <td>
+                    @item.OrganizerName
+                </td>
+            </tr>
+        </table>
+    }
 }

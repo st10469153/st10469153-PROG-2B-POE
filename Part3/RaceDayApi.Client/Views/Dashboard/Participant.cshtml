@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Participant Dashboard";
+}
+
+<div class="container py-4">
+    <h2 class="page-title">Participant Dashboard</h2>
+    <div class="row g-3 mt-2">
+        <div class="col-md-6">
+            <div class="dashboard-card">
+                <h4>Browse Events</h4>
+                <a asp-controller ="Events" asp-action="Index" class="btn btn-primary">Open Events</a>
+            </div>
+        </div>
+
+    <div class="col-md-6">
+        <div class="dashboard-card">
+            <h4>My Enrollments</h4>
+            <a asp-controller="Enrollments" asp-action="Mine" class="btn btn-outline-primary">View Enrollments</a>
+        </div>
+    </div>
+</div>
+</div>

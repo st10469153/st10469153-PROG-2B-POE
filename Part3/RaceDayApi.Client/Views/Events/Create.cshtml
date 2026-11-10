@@ -1,11 +1,27 @@
 ﻿@model RaceDayApi.Client.Models.Event
+@{
+    ViewData["Title"] = "Create Event";
+}
 
-<h2>Create Event</h2>
+<div class="container py-4">
+    <h2>Create Event</h2>
 
 <form asp-action="Create" method="post">
-    <label asp-for="EventName"></label>
-    <input asp-for="EventName" />
-    <label asp-for="OrganizerName"></label>
-    <input asp-for="OrganizerName" />
-    <button type="submit">Save</button>
+        @Html.AntiForgeryToken()
+        <div class="mb-3">
+            <label asp-for="EventName"></label>
+            <input asp-for="EventName" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="OrganizerName"></label>
+            <input asp-for="OrganizerName" />
+        </div>
+
+        <div class="mb-3">
+        
+        </div>
+        <button class="btn-primary" type="submit">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
 </form>
+</div>
+

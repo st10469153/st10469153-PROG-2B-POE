@@ -18,5 +18,18 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #f8f9fa;
+}
+
+.page-title{
+    color:#204479;
+    font-weight:700;
+}
+
+.dashboard-card{
+    background:white;
+    border-radius:16px;
+    padding:20px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
