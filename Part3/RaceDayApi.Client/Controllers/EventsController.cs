@@ -23,20 +23,6 @@ namespace RaceDayApi.Client.Controllers
             }
             var events = await response.Content.ReadFromJsonAsync<List<EventDTO>>();
             return View(events);
-
-            try
-            {
-                var client = _factory.CreateClient("RaceDayApi");
-            }
-            catch (HttpRequestException)
-            {
-                ViewBag.Error = "Api is not available.";
-                return View(new List<EventDTO>());
-            }
-        }
-        public IActionResult Index()
-        {
-            return View();
         }
 
         [HttpGet]
